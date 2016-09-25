@@ -10,10 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var name: UILabel!
+    
+    var tapCount = 0
+    
+    @IBAction func money(sender: AnyObject) {
+        name.text = "$$$$$$$$$"
+        
+    tapCount = tapCount + 1
+        
+        if tapCount >= 10 {
+            name.text = "dont be greedy"
+        }
+        
+        print("button pressed")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.view.backgroundColor = UIColor.blackColor()
+        name.text = "Samyak"
+        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
